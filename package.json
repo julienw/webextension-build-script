@@ -6,7 +6,7 @@
   "bin": {
     "webextension-build-script": "bin/build.js"
   },
-  "repository": "git@github.com:julienw/webextension-build-script.git",
+  "repository": "https://github.com/julienw/webextension-build-script",
   "author": "Julien Wajsberg <felash@gmail.com>",
   "license": "MIT",
   "dependencies": {
