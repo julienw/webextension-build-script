@@ -1,6 +1,6 @@
 {
   "name": "webextension-build-script",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Script to easily manage a self-hosted web extension",
   "main": "index.js",
   "bin": {
