@@ -29,6 +29,6 @@ const tasks = new Listr(
 );
 
 tasks.run().catch(e => {
-  //console.error(e);
+  console.error(e);
   process.exitCode = 1;
 });
