@@ -1,6 +1,6 @@
 {
   "name": "webextension-build-script",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Script to easily manage a self-hosted web extension",
   "repository": "https://github.com/julienw/webextension-build-script",
   "author": "Julien Wajsberg <felash@gmail.com>",
