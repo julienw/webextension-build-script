@@ -9,7 +9,7 @@
     "webextension-build-script": "bin/build.js"
   },
   "scripts": {
-    "test": "node test/run-tests.js"
+    "test": "ava"
   },
   "dependencies": {
     "common-tags": "^1.8.0",
@@ -19,9 +19,8 @@
     "web-ext": "^5.3.0"
   },
   "devDependencies": {
+    "ava": "^3.13.0",
     "execa": "^4.1.0",
-    "fast-glob": "^3.2.4",
-    "get-bin-path": "^5.1.0",
-    "listr2": "^3.2.3"
+    "get-bin-path": "^5.1.0"
   }
 }

@@ -1,32 +1,30 @@
-#!/bin/node
-
+const test = require('ava');
 const execa = require('execa');
-const assert = require('assert');
+const { stripIndent } = require('common-tags');
+const { getBinPathSync } = require('get-bin-path');
 
-const expected = `
-Usage: <REDACTED>/build.js <operation> <optional arguments>
-<operation> can be \`version\`, \`dist\` or \`help\`.
-Operation \`version\` takes a semver increment type: --major, --premajor, --minor, --preminor, --patch, --prepatch, --prerelease. See https://github.com/npm/node-semver#functions for more information.
-Operation \`dist\` takes an optional \`--force\` argument to allow overwriting the output files.
-`;
+const binPath = getBinPathSync();
 
-async function test() {
+test('can run the "help" command', async t => {
+  const expected = stripIndent`
+    Usage: <REDACTED>/build.js <operation> <optional arguments>
+    <operation> can be \`version\`, \`dist\` or \`help\`.
+    Operation \`version\` takes a semver increment type: --major, --premajor, --minor, --preminor, --patch, --prepatch, --prerelease. See https://github.com/npm/node-semver#functions for more information.
+    Operation \`dist\` takes an optional \`--force\` argument to allow overwriting the output files.
+  `;
+
   // First try to run the binary without any argument.
   let result;
   try {
-    const { all } = await execa.node(process.env.BIN_PATH, { all: true });
-    assert.fail('Running the script without an argument should return a non-zero exit code.');
+    const { all } = await execa.node(binPath, { all: true });
+    t.fail('Running the script without an argument should return a non-zero exit code.');
   } catch(e) {
     result = e.all;
   }
-  assert.equal(result.trim().replace(/\/.*\/build\.js/, '<REDACTED>/build.js'), expected.trim());
+  t.is(result.trim().replace(/\/.*\/build\.js/, '<REDACTED>/build.js'), expected.trim());
 
-  const { all } = await execa.node(process.env.BIN_PATH, ['help'], { all: true });
+  // Then run it with the "help" subcommand
+  const { all } = await execa.node(binPath, ['help'], { all: true });
   result = all;
-  assert.equal(result.trim().replace(/\/.*\/build\.js/, '<REDACTED>/build.js'), expected.trim());
-}
-
-test().catch(e => {
-  console.error(e);
-  process.exitCode = 1;
+  t.is(result.trim().replace(/\/.*\/build\.js/, '<REDACTED>/build.js'), expected.trim());
 });
