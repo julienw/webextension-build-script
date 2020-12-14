@@ -16,7 +16,7 @@
     "minimist": "^1.2.5",
     "semver": "^7.3.4",
     "tmp": "^0.2.1",
-    "web-ext": "^5.3.0"
+    "web-ext": "^5.4.1"
   },
   "devDependencies": {
     "ava": "^3.13.0",
