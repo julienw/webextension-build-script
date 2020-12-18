@@ -19,7 +19,7 @@
     "web-ext": "^5.4.1"
   },
   "devDependencies": {
-    "ava": "^3.13.0",
+    "ava": "^3.14.0",
     "execa": "^5.0.0",
     "get-bin-path": "^5.1.0"
   }
