@@ -14,7 +14,7 @@
   "dependencies": {
     "common-tags": "^1.8.0",
     "minimist": "^1.2.5",
-    "semver": "^7.3.4",
+    "semver": "^7.3.5",
     "tmp": "^0.2.1",
     "web-ext": "^6.0.0"
   },
