@@ -1,7 +1,7 @@
-const test = require('ava');
-const execa = require('execa');
-const { stripIndent } = require('common-tags');
-const { getBinPathSync } = require('get-bin-path');
+import test from 'ava';
+import execa from 'execa';
+import { stripIndent } from 'common-tags';
+import { getBinPathSync } from 'get-bin-path';
 
 const binPath = getBinPathSync();
 
