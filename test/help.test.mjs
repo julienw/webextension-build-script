@@ -1,5 +1,5 @@
 import test from 'ava';
-import execa from 'execa';
+import { execaNode } from 'execa';
 import { stripIndent } from 'common-tags';
 import { getBinPathSync } from 'get-bin-path';
 
@@ -16,7 +16,7 @@ test('can run the "help" command', async t => {
   // First try to run the binary without any argument.
   let result;
   try {
-    const { all } = await execa.node(binPath, { all: true });
+    const { all } = await execaNode(binPath, { all: true });
     t.fail('Running the script without an argument should return a non-zero exit code.');
   } catch(e) {
     result = e.all;
@@ -24,7 +24,7 @@ test('can run the "help" command', async t => {
   t.is(result.trim().replace(/\/.*\/build\.js/, '<REDACTED>/build.js'), expected.trim());
 
   // Then run it with the "help" subcommand
-  const { all } = await execa.node(binPath, ['help'], { all: true });
+  const { all } = await execaNode(binPath, ['help'], { all: true });
   result = all;
   t.is(result.trim().replace(/\/.*\/build\.js/, '<REDACTED>/build.js'), expected.trim());
 });
