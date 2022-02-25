@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "ava": "^4.0.1",
-    "execa": "^6.0.0",
+    "execa": "^6.1.0",
     "get-bin-path": "^6.1.0"
   }
 }
