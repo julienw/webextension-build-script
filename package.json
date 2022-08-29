@@ -20,8 +20,8 @@
   "devDependencies": {
     "ava": "^4.3.1",
     "execa": "^6.1.0",
-    "get-bin-path": "^7.0.0",
-    "web-ext": "^7.1.1"
+    "get-bin-path": "^7.1.0",
+    "web-ext": "^7.2.0"
   },
   "peerDependencies": {
     "web-ext": "^7.1.1"
