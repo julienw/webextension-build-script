@@ -18,7 +18,7 @@
     "tmp": "^0.2.3"
   },
   "devDependencies": {
-    "ava": "^6.1.1",
+    "ava": "^6.1.2",
     "execa": "^8.0.1",
     "get-bin-path": "^10.0.0",
     "web-ext": "^7.11.0"
