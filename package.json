@@ -21,7 +21,7 @@
     "ava": "^6.2.0",
     "execa": "^9.5.2",
     "get-bin-path": "^10.0.0",
-    "web-ext": "^8.3.0"
+    "web-ext": "^8.4.0"
   },
   "peerDependencies": {
     "web-ext": "^7.1.1"
