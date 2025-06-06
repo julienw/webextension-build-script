@@ -19,9 +19,9 @@
   },
   "devDependencies": {
     "ava": "^6.3.0",
-    "execa": "^9.5.3",
+    "execa": "^9.6.0",
     "get-bin-path": "^10.0.0",
-    "web-ext": "^8.6.0"
+    "web-ext": "^8.7.1"
   },
   "peerDependencies": {
     "web-ext": "^7.1.1"
