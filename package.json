@@ -18,10 +18,10 @@
     "tmp": "^0.2.5"
   },
   "devDependencies": {
-    "ava": "^6.4.1",
+    "ava": "^7.0.0",
     "execa": "^9.6.1",
     "get-bin-path": "^10.0.0",
-    "web-ext": "^9.3.0"
+    "web-ext": "^9.4.0"
   },
   "peerDependencies": {
     "web-ext": "^7.1.1"
