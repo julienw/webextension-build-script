@@ -15,7 +15,7 @@
     "common-tags": "^1.8.2",
     "minimist": "^1.2.8",
     "semver": "^7.8.0",
-    "tmp": "^0.2.5"
+    "tmp": "^0.2.6"
   },
   "devDependencies": {
     "ava": "^7.0.0",
